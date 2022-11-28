@@ -1,0 +1,69 @@
+{
+	"info": {
+		"_postman_id": "3b7b6c7e-295b-4cba-bca5-752cb3989781",
+		"name": "node.js master class",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13587130"
+	},
+	"item": [
+		{
+			"name": "query strings",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:3000?foo=bar&fizz=buzz&apples=oranges&red=blue",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"query": [
+						{
+							"key": "foo",
+							"value": "bar"
+						},
+						{
+							"key": "fizz",
+							"value": "buzz"
+						},
+						{
+							"key": "apples",
+							"value": "oranges"
+						},
+						{
+							"key": "red",
+							"value": "blue"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "payload",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "This is the body we are sending"
+				},
+				"url": {
+					"raw": "localhost:3000",
+					"host": [
+						"localhost"
+					],
+					"port": "3000"
+				}
+			},
+			"response": []
+		}
+	]
+}
