@@ -78,7 +78,7 @@ var unifiedServer = function(req, res){
         chosenHandler(data, function(statusCode, payload){
            
             // Use the status code called back by the handler or default
-            statusCode = typeof(statusCode) == 'number' ? statusCode: 200;
+            statusCode = typeof(statusCPOSTode) == 'number' ? statusCode: 200;
 
             // Use the payload called back by the handler of default 
             payload = typeof(payload) == 'object' ? payload: {};
@@ -102,10 +102,9 @@ var unifiedServer = function(req, res){
 // Define the handlers
 var handlers = {};
 
-// SAmple handler
-handlers.sample = function(data, callback){
-    // Callback a http status code, and payload object
-    callback(406, {'name': 'sample handler'});
+// Ping handler
+handlers.ping = function(data, callback){
+    callback(200);
 };
 
 // Not found handler
@@ -115,5 +114,5 @@ handlers.notFound = function(data, callback){
 
 // Define a request router
 var router = {
-    'sample': handlers.sample
+    'ping': handlers.ping
 };
